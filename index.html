@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Print your tasks!</title>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        body {
+            font: 16px/1.5 'Museo Sans', 'Lucida Grande', 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            color: #555;
+        }
+
+        .main {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer {
+            text-align: center
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            font-family: 'Raleway', 'lucida Grande', Tahoma, Arial;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Raleway', 'lucida Grande', Tahoma, Arial;
+			font-size: 20px;
+			border-bottom: 1px solid #eee;
+			margin: 1.5em 0;
+			padding-bottom: 10px;
+			color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: #528EC5;
+        }
+
+        ol {
+            margin: 56px 0;
+        }
+
+        ol li {
+            line-height: 1.75em;
+        }
+
+        small {
+            color: #918C8C;
+        }
+
+        @font-face {
+            font-family: 'Museo Sans';
+            src: url("/fonts/MuseoSans_500-webfont.eot");
+            src: url("/fonts/MuseoSans_500-webfont.eot?#iefix") format('embedded-opentype'), url("/fonts/MuseoSans_500-webfont.woff") format('woff'), url("/fonts/MuseoSans_500-webfont.ttf") format('truetype'), url("/fonts/MuseoSans_500-webfont.svg#museosans") format('svg');
+            font-weight: 400;
+            font-style: normal
+        }
+
+        @font-face {
+            font-family: 'Museo Sans';
+            src: url("/fonts/MuseoSans_500_Italic-webfont.eot");
+            src: url("/fonts/MuseoSans_500_Italic-webfont.eot?#iefix") format('embedded-opentype'), url("/fonts/MuseoSans_500_Italic-webfont.woff") format('woff'), url("/fonts/MuseoSans_500_Italic-webfont.ttf") format('truetype'), url("/fonts/MuseoSans_500_Italic-webfont.svg#museosans") format('svg');
+            font-weight: 400;
+            font-style: italic
+        }
+
+        @font-face {
+            font-family: 'Museo Sans';
+            src: url("/fonts/MuseoSans_700-webfont.eot");
+            src: url("/fonts/MuseoSans_700-webfont.eot?#iefix") format('embedded-opentype'), url("/fonts/MuseoSans_700-webfont.woff") format('woff'), url("/fonts/MuseoSans_700-webfont.ttf") format('truetype'), url("/fonts/MuseoSans_700-webfont.svg#museosans") format('svg');
+            font-weight: 700;
+            font-style: normal
+        }
+
+        @font-face {
+            font-family: 'Museo Sans';
+            src: url("/fonts/MuseoSans_700_Italic-webfont.eot");
+            src: url("/fonts/MuseoSans_700_Italic-webfont.eot?#iefix") format('embedded-opentype'), url("/fonts/MuseoSans_700_Italic-webfont.woff") format('woff'), url("/fonts/MuseoSans_700_Italic-webfont.ttf") format('truetype'), url("/fonts/MuseoSans_700_Italic-webfont.svg#museosans") format('svg');
+            font-weight: 700;
+            font-style: italic
+        }
+
+        @font-face {
+            font-family: 'Museo Sans Light';
+            src: url("/fonts/MuseoSans_300-webfont.eot");
+            src: url("/fonts/MuseoSans_300-webfont.eot?#iefix") format('embedded-opentype'), url("/fonts/MuseoSans_100-webfont.woff") format('woff'), url("/fonts/MuseoSans_100-webfont.ttf") format('truetype'), url("/fonts/MuseoSans_100-webfont.svg#museosans") format('svg');
+            font-weight: 400;
+            font-style: normal
+        }
+
+        @font-face {
+            font-family: 'Museo Sans Black';
+            src: url("/fonts/MuseoSans_900-webfont.eot");
+            src: url("/fonts/MuseoSans_900-webfont.eot?#iefix") format('embedded-opentype'), url("/fonts/MuseoSans_900-webfont.woff") format('woff'), url("/fonts/MuseoSans_900-webfont.ttf") format('truetype'), url("/fonts/MuseoSans_900-webfont.svg#museosans") format('svg');
+            font-weight: 400;
+            font-style: normal
+        }
+
+        a.button {
+            display: inline-block;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            background-color: #cacaca;
+            padding: 1px;
+            border: 0;
+        }
+
+        a.button span {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            font-family: "Museo Sans", "Helvetica Neue", sans-serif;
+            border: 0;
+            -webkit-border-radius: 2px;
+            border-radius: 2px;
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 1em;
+            padding: 6px 8px;
+            position: relative;
+            text-decoration: none;
+            background-color: #ececec;
+            color: #6e7780;
+            text-shadow: 0 1px 0 #fff;
+            text-align: center;
+            cursor: move;
+            height: 24px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .bookmarklet {
+            overflow: hidden;
+            background: #f7f7f7;
+            border: 1px solid #ddd;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+
+        .bookmarklet .button {
+            float: left;
+            text-decoration: none;
+            width: 150px;
+        }
+
+        .bookmarklet .button span {
+            width: 148px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 18px;
+            padding: 0;
+        }
+
+        .bookmarklet p {
+            float: left;
+            padding-left: 20px;
+            font-size: 16px;
+            line-height: 50px;
+            margin: 0;
+        }
+
+        .alert {
+            color: #c09853;
+            padding: 8px 35px 8px 14px;
+            margin-bottom: 20px;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+            background-color: #fcf8e3;
+            border: 1px solid #fbeed5;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+        }
+
+        .alert h4 {
+            margin: 0;
+        }
+
+        .alert p {
+            margin: 0;
+            font-size: 14px;
+        }
+        code{
+        	color: #808080;
+			font-size: 0.96em;
+			background-color: #f9f9f7;
+			padding: 1px 2px;
+			border: 1px solid #dadada;
+			border-radius: 3px;
+			font-family: "Inconsolata", "Menlo", monospace;
+        }
+    </style>
+</head>
+
+<body>
+<div class="main">
+    <h1>Print your tasks!</h1>
+    <!-- AddThis Button BEGIN -->
+    <div class="addthis_toolbox addthis_default_style">
+        <a class="addthis_button_tweet"></a>
+        <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+        <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+        <a class="addthis_button_pinterest_pinit"></a>
+        <a class="addthis_counter addthis_pill_style"></a>
+    </div>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=undefined"></script>
+    <!-- AddThis Button END -->
+
+    <p>This bookmarklet help you generate a beautiful printable page that contain your tasks from Doit.im. All tasks are
+        based on <a href='http://doit.im'>Doit.im</a>.</p>
+
+    <div class="alert alert-block">
+        <h4>Caution!</h4>
+
+        <p>As the print page will be opened in a new window, and some browsers such as chrome may block pop-ups,
+            please unblock them!</p>
+    </div>
+    <h2>Bookmarklet for Doit.im Web version</h2>
+
+    <div class="bookmarklet"><a class="button" onclick="javascript:alert('Please follow the instructions on the page.')"
+                                href="javascript:(function(){var element=document.createElement('script');element.setAttribute('src','https://rawgithub.com/Leeiio/5770523/raw/3fbef1fd3df162a42e2d523eb051d209cd0ca18e/printTask.js?'+(new Date().getTime()));document.body.appendChild(element);})()"><span>Print Tasks!</span></a>
+
+        <p>← Drag this button to your bookmark bar!</p></div>
+    <ol>
+
+        <li>Display your Bookmarks Bar. Click
+            <strong class="chrome-content">View &gt; Always Show Bookmarks Bar</strong>.
+        </li>
+        <li>Drag the "Print Tasks!" button to your Bookmarks Toolbar.</li>
+        <li>When you want to print tasks in Doit.im(https://i.doit.im), click the "Print Tasks!" button in your
+            Bookmarks Toolbar.
+        </li>
+    </ol>
+    <h2>Changelog</h2>
+    <p><strong>June 16, 2013</strong> <code>1.2</code></p>
+	<ul>
+		<li>New design for this description page.</li>
+		<li><p>Google Chrome (and possibly other browsers?) blocks HTTP resources from being accessed from an HTTPS document. This is to prevent "<a href="https://developer.mozilla.org/en-US/docs/Security/MixedContent" rel="nofollow">mixed content</a>" attacks, in which insecure HTTP scripts could be <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack" rel="nofollow">intercepted by an attacker</a> in transit over the network and altered to perform any kind of malicious activity (e.g., leak cookies or sensitive page information to a third party). Such a violation would undo any protection granted by HTTPS.</p>
+
+<p>Chrome used to provide a prominent warning that an insecure resource was blocked, but now it no longer does so, and all insecure loads silently fail. The only solution available to you at this time is to use HTTPS yourself when you serve the script.</p>
+<p>So i have put the script to github gist which provide me a https:// link script.</p>
+</li>
+	</ul>
+	<p><strong>Dec 2nd, 2011</strong> <code>1.1</code></p>
+	<ul>
+		<li>Update for the new designed website of Doit.im.</li>
+	</ul>
+    <p><strong>March 3rd, 2011</strong> <code>1.0</code></p>
+    <ul>
+		<li>First version release.</li>
+	</ul>
+    <div class="footer">
+        <small>Copyright © 2011 - 2013 <a href="http://twitter.com/leeiio">@leeiio</a>, All Rights Reserved</small>
+        <br/>
+        <small>Donate me to buy me a coffee.</small>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_donations">
+            <input type="hidden" name="business" value="guaniu@gmail.com">
+            <input type="hidden" name="lc" value="US">
+            <input type="hidden" name="item_name" value="Buy Leeiio a coffee">
+            <input type="hidden" name="no_note" value="0">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_SM.gif:NonHostedGuest">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0"
+                   name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/zh_XC/i/scr/pixel.gif" width="1" height="1">
+        </form>
+
+    </div>
+</div>
+</body>
+</html>
