@@ -11,7 +11,7 @@
     ul{}\
     #title{text-align:center;}\
     .title a{text-decoration:none;color:#333;cursor:default;}\
-	#quick_add_input{display:none;}\
+	  #quick_add_input, #search_result, .archiver-tool, #goal_info, #project_info, #task_group .count, .empty-tip-content, .ng-hide{display:none;}\
     h1{font-family: 'Raleway', 'lucida Grande',Tahoma,Arial, serif;margin-bottom:30px;}\
     li{line-height:25px;font-family: 'lucida Grande',Tahoma,Arial;margin-bottom:5px;}\
     .task-checkbox {border: 1px solid #333333;float: left;height: 15px;margin: 4px 10px 0 0;width: 15px;}\
