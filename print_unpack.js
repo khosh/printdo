@@ -2,7 +2,8 @@
     var font = "<link href='https://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>";
     var js = "<script type='text/javascript'>\
     document.title = 'Print Your Tasks!';\
-    var title_str = prompt('Please enter your print page title:','What to do now ?');\
+//    var title_str = prompt('Please enter your print page title:','What to do now ?');\
+    var title_str = 'What to do now ? - Printable Doit.im Page';\
     document.getElementById('title').innerHTML = title_str;\
     </script>";
     var css = "<style type='text/css'>\
