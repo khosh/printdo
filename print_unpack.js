@@ -6,7 +6,6 @@
         var title_str = 'What to do now ? - Printable Doit.im Page';\
         document.getElementById('title').innerHTML = title_str;\
       </script>";
-//        .project,.context{float:left;margin-right:10px;}
     var css = "<style type='text/css'>\
 	body{font-size:12px;font-family: 'lucida Grande',Tahoma,Arial;}\
         ul,li{list-style:none;padding:0;}\
