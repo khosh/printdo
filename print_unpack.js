@@ -17,7 +17,7 @@
     .task-checkbox {border: 1px solid #333333;float: left;height: 15px;margin: 4px 10px 0 0;width: 15px;}\
     .title{margin-left:27px;}\
     .taskList{margin-top:10px;}\
-    .project,.context{float:left;margin-right:10px;}\
+    .project,.context{margin-right:10px;}\
     .group h4{border-bottom: 1px solid #000;font-size: 14px;margin: 0;padding-bottom: 5px;}\
     #print{width:600px;margin:0 auto;}\
     #printthis{text-align:right;}\
