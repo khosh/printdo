@@ -29,6 +29,7 @@
 	</style>";
     var doit_wrap = $('#task_container').clone();
     doit_wrap.find('#task_quick_add,#task_quick_add_in,.icon').remove();
+    doit_wrap.find('div').removeAttr('style');
     var newwindo=window.open("","Print Your Tasks!","");
     newwindo.document.write(css);
     newwindo.document.write(font);
