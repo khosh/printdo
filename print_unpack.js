@@ -1,10 +1,14 @@
 (function(){
+    var doctitle = document.getElementsByTagName('title').item(0).text;
+    doctitle.match(/\((\d+)\) *(.+) *\|/);
+    //var tasknum = RegExp.$1;
+    var taskname = RegExp.$2;
+    var newtitle = taskname + ' Tasks';
     var font = "<link href='https://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>";
     var js = "<script type='text/javascript'>\
-    document.title = 'Print Your Tasks!';\
-    var title_str = prompt('Please enter your print page title:','What to do now ?');\
-    document.getElementById('title').innerHTML = title_str;\
-    </script>";
+        document.title = '" + newtitle + "';\
+        document.getElementById('title').innerHTML = '" + newtitle + "';\
+        </script>";
     var css = "<style type='text/css'>\
 	body{font-size:12px;font-family: 'lucida Grande',Tahoma,Arial;}\
     ul,li{list-style:none;padding:0;}\
@@ -31,7 +35,7 @@
     doit_wrap.find('#task_quick_add,#task_quick_add_in,.icon').remove();
     doit_wrap.find('div').removeAttr('style');
     var now = new Date();
-    var newwindo=window.open("","Print Your Tasks!","");
+    var newwindo=window.open("",doctitle,"");
     newwindo.document.write(css);
     newwindo.document.write(font);
     newwindo.document.write('<div id="print"><h1 id="title"></h1>'+
