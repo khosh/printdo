@@ -30,10 +30,15 @@
     var doit_wrap = $('#task_container').clone();
     doit_wrap.find('#task_quick_add,#task_quick_add_in,.icon').remove();
     doit_wrap.find('div').removeAttr('style');
+    var now = new Date();
     var newwindo=window.open("","Print Your Tasks!","");
     newwindo.document.write(css);
     newwindo.document.write(font);
-    newwindo.document.write('<div id="print"><h1 id="title"></h1><div id="printthis"><a href=javascript:print();>[Print this page]</a></div>'+doit_wrap.html()+'<div id="copyright">Copyright © 2011 @leeiio(http://leeiio.me), All Rights Reserved</div></div>');
+    newwindo.document.write('<div id="print"><h1 id="title"></h1>'+
+        '<div id="printdate">Printed Date:'+now.getFullYear()+'-'+(now.getMonth()+1)+'-'+now.getDate()+'</div>'+
+        '<div id="printthis"><a href=javascript:print();>[Print this page]</a></div>'+
+        doit_wrap.html()+
+        '<div id="copyright">Copyright © 2011 @leeiio(http://leeiio.me), All Rights Reserved</div></div>');
     newwindo.document.write(js);
     newwindo.document.close();
 })();
